@@ -1,0 +1,20 @@
+<div class="featured-post-preview">
+	<div class="featured-post-preview__header">
+		<h1 class="featured-post-preview__title">
+			<a href="{{post.link}}">{{post.title}}</a>
+		</h1>
+		<h3 class="featured-post-preview__subtitle">
+			<a href="{{post.category.link}}">{{post.category}}</a>
+		</h3>
+	</div>
+	<div class="featured-post-preview__body">
+		<p class="featured-post-preview__content">{{post.preview.length(30).force.read_more('')}}</p>
+		<div class="featured-post-preview__read-more-container">
+			<a href="{{post.link}}" class="featured-post-preview__read-more">Read article</a>
+			<a href="{{post.link}}" class="featured-post-preview__comments">
+				<span class="dashicons dashicons-admin-comments featured-post-preview__comment-icon"></span>
+				<div class="featured-post-preview__comment-count">{{post.comment_count}}</div>
+			</a>
+		</div>
+	</div>
+</div>
