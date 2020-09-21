@@ -45,3 +45,27 @@
 		</div>
 		<img class="about__image" src="{% for post in posts %}{{post.thumbnail.src}}{% endfor %}" alt="Placeholder">
 	</section>
+
+	<section class="instagram-feed">
+		<div class="container">
+			<div class="section__header">
+				<div class="section__header-content">
+					<h2 class="section__title">Explore</h2>
+					<div class="section__text">Here's a few of my most recent Instagram posts.</div>
+				</div>
+				<div class="section__link-container">
+					<a href="https://www.instagram.com/findingtheseoul/" class="section__link">View more on Instagram</a>
+				</div>
+			</div>
+			<div class="section__body">
+				<div class="gallery">
+					<a class="gallery__item" href="#"><img src="https://via.placeholder.com/400" alt="Placeholder" class="gallery__image"></a>
+					<a class="gallery__item" href="#"><img src="https://via.placeholder.com/400" alt="Placeholder" class="gallery__image"></a>
+					<a class="gallery__item" href="#"><img src="https://via.placeholder.com/400" alt="Placeholder" class="gallery__image"></a>
+					<a class="gallery__item" href="#"><img src="https://via.placeholder.com/400" alt="Placeholder" class="gallery__image"></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}
