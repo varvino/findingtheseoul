@@ -1,0 +1,14 @@
+<div class="navbar">
+	<a href="{{site.link}}" class="logo">
+		<h3 class="logo__text">Findingtheseoul</h3>
+	</a>
+	<div class="hamburger" onclick="openNav()"></div>
+	<div class="navmenu-overlay">
+		<a href="javascript:void(0)" class="button--close" onclick="closeNav()"></a>
+		<div class="navmenu">
+			{% for item in header_menu.items %}
+				<a class="nav-item{{ item.classes|join(' ') }}" href="{{ item.link }}">{{ item.title }}</a>
+			{% endfor %}
+		</div>
+	</div>
+</div>
