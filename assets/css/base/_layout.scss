@@ -1,0 +1,209 @@
+/* ========================================================
+    TABLE OF CONTENT
+==========================================================
+    1. CONTAINER
+    2. SECTION
+    3. GRID
+        a. GRID GAPS
+        b. GRID ORDER
+    4. FLEX
+    5. MISC
+======================================================== */
+/* ========================================================
+    1. CONTAINER
+======================================================== */
+.container {
+    width   : 90%;
+    margin  : 0 auto;
+    position: relative;
+
+    @include medium {
+        width: 80%;
+    }
+
+    @include large {
+        width    : 60%;
+        max-width: 1300px;
+    }
+}
+
+/* ========================================================
+    2. SECTION
+======================================================== */
+section {
+    margin-bottom: $spacing--md;
+
+    @include medium {
+        margin-bottom: $spacing--lg;
+    }
+
+    @include large {
+        margin-bottom: $spacing--xl;
+    }
+}
+
+.section__header {
+    margin-bottom: $spacing--sm;
+
+    @include medium {
+        margin-bottom: $spacing--md;
+    }
+}
+
+.section__title {
+    margin-bottom: 0.625rem;
+}
+
+.section__text {
+    @extend .text--muted;
+    @extend .text;
+    margin-bottom: 0;
+}
+
+/* ========================================================
+    3. GRID
+======================================================== */
+.grid {
+    display: grid;
+}
+
+.grid-column--two {
+    grid-template-columns: 1fr;
+
+    @include medium {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.grid-column--three {
+    grid-template-columns: 1fr;
+
+    @include medium {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.grid-column--four {
+    grid-template-columns: 1fr;
+
+    @include medium {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include large {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include extra-large {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    >* {
+        &:last-child {
+            @include large {
+                grid-column: 1 / span 3;
+            }
+
+            @include extra-large {
+                grid-row   : 1;
+                grid-column: 1;
+            }
+        }
+    }
+}
+
+/* ========================================================
+    3a. GRID GAPS
+======================================================== */
+.gap--sm {
+    gap: $spacing--sm;
+}
+
+.gap--md {
+    gap: $spacing--md;
+}
+
+.gap--lg {
+    gap: $spacing--lg;
+}
+
+.gap--xl {
+    gap: $spacing--xl;
+}
+
+/* ========================================================
+    3b. GRID ORDER
+======================================================== */
+.grid-row-first {
+    grid-row: 1;
+}
+
+.grid-col-first {
+    grid-column: 1;
+}
+
+/* ========================================================
+    4. FLEX
+======================================================== */
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+/* ========================================================
+    5. MISC
+======================================================== */
+.no-margin {
+    margin: 0;
+}
+
+.hidden-sm {
+    @include small {
+        display: none;
+    }
+}
+
+.hidden-md {
+    @include medium {
+        display: none;
+    }
+}
+
+.hidden-lg {
+    @include large {
+        display: none;
+    }
+}
+
+.hidden-xl {
+    @include extra-large {
+        display: none;
+    }
+}
+
+.divider {
+    margin-top   : $spacing--md;
+    margin-bottom: $spacing--md;
+
+    @include medium {
+        margin-top   : $spacing--lg;
+        margin-bottom: $spacing--lg;
+    }
+
+    @include large {
+        margin-top   : $spacing--xl;
+        margin-bottom: $spacing--xl;
+    }
+}
+
+.full-width {
+    width      : 100vw;
+    margin-left: calc((100% - 100vw) / 2);
+}
