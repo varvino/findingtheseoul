@@ -1,0 +1,14 @@
+{% if fn('is_front_page') %}
+	<section class="hero" {% for post in recent_posts %} {% if loop.first %} style="background-image:  linear-gradient(180deg, rgba(30, 34, 37, 0) 20%, #1E2225 70%), url('{{post.thumbnail}}')" {% endif %} {% endfor %}>
+		<div class="hero-container container">
+			{% include "partials/navbar.twig" %}
+			{% for post in recent_posts %}
+				{% if loop.first %}
+					{% include "partials/featured-post-preview.twig" %}
+				{% endif %}
+			{% endfor %}
+		</div>
+	</section>
+{% else %}
+	{% include "partials/navbar.twig" %}
+{% endif %}
