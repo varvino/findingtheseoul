@@ -1,0 +1,17 @@
+<div class="blog-post-preview" {% if post.thumbnail %} style="background-image: linear-gradient(180deg, rgba(30, 34, 37, 0) 0%, #292D30 96.59%, #292D30 96.59%), url('{{post.thumbnail|resize(400)}}')" {% endif %}>
+	<div class="blog-post-preview__content">
+		<h6 class="blog-post-preview__subtitle">
+			<a href="{{post.category.link}}">{{post.category}}</a>
+		</h6>
+		<h3 class="blog-post-preview__title">
+			<a href="{{post.link}}">{{post.title}}</a>
+		</h3>
+		<div class="blog-post-preview__read-more-container">
+			<a href="{{post.link}}" class="blog-post-preview__read-more">Read article</a>
+			<a href="{{post.link}}" class="blog-post-preview__comments">
+				<span class="dashicons dashicons-admin-comments blog-post-preview__comment-icon"></span>
+				<div class="blog-post-preview__comment-count">{{post.comment_count}}</div>
+			</a>
+		</div>
+	</div>
+</div>
