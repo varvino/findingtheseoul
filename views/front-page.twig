@@ -17,3 +17,19 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="explore" id="explore">
+		<div class="container">
+			<div class="section__header">
+				<h2 class="section__title">Explore</h2>
+				<div class="section__text">Read through a variety of my stories, try one of these categories.</div>
+			</div>
+			<div class="category-previews items">
+				{% for category in categories %}
+					<a href="{{category.link}}" class="category-preview" style="background-image: linear-gradient(180deg, rgba(30, 34, 37, 0) 0%, #1E2225 90%, #1E2225 90%), url({{category.thumbnail.guid|resize(400)}});">
+						<h4 class="category-preview__title">{{category}}</h4>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
