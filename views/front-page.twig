@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<section class="latest-articles" id="latest-articles">
+		<div class="container">
+			<div class="section__header">
+				<h2 class="section__title">Latest articles</h2>
+				<div class="section__text">These are my most recent posts.</div>
+			</div>
+			<div class="blog-post-previews">
+				{% for post in recent_posts|slice(0,5) %}
+					{% if not loop.first %}
+						{% include "partials/blog-post-preview.twig" %}
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
