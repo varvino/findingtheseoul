@@ -168,6 +168,19 @@ class StarterSite extends Timber\Site {
 		$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
 		return $twig;
 	}
+function blog_styles()
+{
+	wp_enqueue_style('dashicons');
+}
+
+add_action('wp_enqueue_scripts', 'blog_styles');
+
+function blog_scripts()
+{
+	wp_enqueue_script('jquery');
+}
+
+add_action('wp_enqueue_scripts', 'blog_scripts');
 
 }
 
