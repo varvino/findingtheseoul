@@ -5,3 +5,38 @@
 		<span class="text--muted">Copyright
 			{{"now"|date('Y')}}</span>
 	</div>
+	<div class="footer-links">
+		{% if quick_links_menu.items is not empty %}
+			<div class="footer-item">
+				<h5>Quick Links</h5>
+
+				<div class="footer-navmenu">
+					{% for item in quick_links_menu.items %}
+						<a class="nav-item{{ item.classes|join(' ') }}" href="{{ item.link }}">{{ item.title }}</a>
+					{% endfor %}
+				</div>
+			</div>
+		{% endif %}
+
+		{% if categories is not empty %}
+			<div class="footer-item">
+				<h5>Categories</h5>
+				<div class="footer-navmenu categories">
+					{% for category in categories %}
+						<a href="{{category.link}}" class="nav-item">{{category.title}}</a>
+					{% endfor %}
+				</div>
+			</div>
+		{% endif %}
+
+		{% if social_menu.items is not empty %}
+			<div class="footer-item">
+				<h5>Social</h5>
+				<div class="footer-navmenu">
+					{% for item in social_menu.items %}
+						<a class="nav-item{{ item.classes|join(' ') }}" href="{{ item.link }}">{{ item.title }}</a>
+					{% endfor %}
+				</div>
+			</div>
+		{% endif %}
+	</div>
