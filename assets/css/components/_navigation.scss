@@ -22,14 +22,6 @@
     }
 }
 
-.hamburger--white {
-    @extend .hamburger;
-
-    &:after {
-        color: $font-color;
-    }
-}
-
 .navmenu-overlay {
     @include small {
         display         : flex;
