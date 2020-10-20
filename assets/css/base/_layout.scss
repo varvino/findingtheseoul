@@ -97,21 +97,6 @@ section {
     @include extra-large {
         grid-template-columns: repeat(4, 1fr);
     }
-
-    >* {
-        &:last-child {
-            @include large {
-                grid-column: 1 / span 3;
-            }
-
-            @include extra-large {
-                grid-row   : 1;
-                grid-column: 1;
-            }
-        }
-    }
-}
-
 /* ========================================================
     3a. GRID GAPS
 ======================================================== */
@@ -155,6 +140,49 @@ section {
 
 .flex-row {
     flex-direction: row;
+}
+
+/* ========================================================
+    5. JUSTIFY
+======================================================== */
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+/* ========================================================
+    6. ALIGN
+======================================================== */
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+
+.align-items-end {
+    align-items: flex-end;
 }
 
 /* ========================================================
