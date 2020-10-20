@@ -1,0 +1,24 @@
+<div class="{{comment.comment_type}}-container comment-number__{{comment.ID}}">
+	<div class="comment">
+		<div class="comment-author__meta">
+			<img class="comment-author__image" src="{{comment.avatar}}">
+			<div>
+				<h4 class="comment-author__name">{{comment.author.name}}</h4>
+				<div class="text--muted">{{comment.date}}
+					at
+					{{comment.time}}</div>
+			</div>
+		</div>
+		<div class="comment__content">{{comment.comment_content|wpautop}}</div>
+
+		{% include "partials/comment-form.twig" %}</div>
+
+	{% if post.comments %}
+		<div class="child-comments">
+			{% for comment in comment.children %}
+				<img class="child-comments__reply-arrow" src="{{theme.link}}/assets/img/arrow-right.svg">
+				{% include "partials/comment.twig" with {comment:comment} %}
+			{% endfor %}
+		</div>
+	{% endif %}
+</div>

@@ -1,0 +1,15 @@
+<form class="comment-form-container" method="post" action="{{ site.site_url~'/wp-comments-post.php' }}">
+	<div class="comment-form">
+		{% if  user %}
+			<input class="comment-form__field" type="hidden" name="email" value="{{ user.email }}">
+			<input class="comment-form__field" type="hidden" name="author" value="{{ user.name }}">
+		{% else %}
+			<input class="comment-form__field" placeholder="What's your name?" required type="text">
+		{% endif %}
+		<textarea class="comment-form__field" placeholder="Leave a comment." name="comment"></textarea>
+		<input name="comment_post_ID" value="{{ post.id }}" type="hidden">
+		<input name="comment_parent" value="{{ comment.ID|default('0') }}" type="hidden">
+		<button type="submit" name="Submit" class="button send-button">Send <span class="dashicons dashicons-arrow-right-alt"></span></button>
+	</div>
+	<button class="button reply-button">Reply</button>
+</form>
