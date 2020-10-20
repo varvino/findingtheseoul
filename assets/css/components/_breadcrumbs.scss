@@ -1,0 +1,39 @@
+.breadcrumbs {
+    border-top   : 1px solid transparentize($color: $font-color, $amount: 0.85);
+    border-bottom: 1px solid transparentize($color: $font-color, $amount: 0.85);
+    margin-bottom: $spacing--sm;
+
+    @include medium {
+        margin-bottom: $spacing--md;
+    }
+
+    @include large {
+        margin-bottom: $spacing--lg;
+    }
+
+    .container {
+        display    : flex;
+        align-items: center;
+        overflow   : scroll;
+
+        padding: 1rem 0;
+        color  : transparentize($color: $font-color, $amount: 0.5);
+
+        a {
+            color: inherit;
+        }
+
+        @include medium {
+            overflow: auto;
+        }
+    }
+}
+
+[class*="breadcrumb--"] {
+    white-space: nowrap;
+}
+
+.separator {
+    display: flex;
+    margin : 0 0.625rem 0 0.625rem;
+}

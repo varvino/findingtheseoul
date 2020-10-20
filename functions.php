@@ -1,5 +1,6 @@
-
 <?php
+
+include_once 'custom_breadcrumbs.php';
 
 /**
  * Timber starter-theme
@@ -146,6 +147,9 @@ class StarterSite extends Timber\Site
 	 */
 	public function add_to_twig($twig)
 	{
+		// Add Breadcrumbs
+		$twig->addFunction(new Timber\Twig_Function('custom_breadcrumbs', 'custom_breadcrumbs'));
+
 		return $twig;
 	}
 }
