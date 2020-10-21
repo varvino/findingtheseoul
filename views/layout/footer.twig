@@ -13,7 +13,7 @@
 
 				<div class="footer-navmenu">
 					{% for item in quick_links_menu.items %}
-						<a class="nav-item{{ item.classes|join(' ') }}" href="{{ item.link }}">{{ item.title }}</a>
+						<a class="nav-item{{ item.classes|join(' ') }}" href="{{ item.link }}" target="{{ item.meta( '_menu_item_target' ) ? item.meta( '_menu_item_target' ) : '_self'}}">{{ item.title }}</a>
 					{% endfor %}
 				</div>
 			</div>
@@ -35,7 +35,7 @@
 				<h5>Social</h5>
 				<div class="footer-navmenu">
 					{% for item in social_menu.items %}
-						<a class="nav-item{{ item.classes|join(' ') }}" href="{{ item.link }}">{{ item.title }}</a>
+						<a class="nav-item{{ item.classes|join(' ') }}" href="{{ item.link }}" target="{{ item.meta( '_menu_item_target' ) ? item.meta( '_menu_item_target' ) : '_self'}}">{{ item.title }}</a>
 					{% endfor %}
 				</div>
 			</div>
