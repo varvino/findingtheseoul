@@ -1,0 +1,107 @@
+/* ========================================================
+    TABLE OF CONTENT
+==========================================================
+	1. FOOTER
+	2. LOGO
+	3. FOOTER LINKS
+======================================================== */
+/* =======================================================
+    1. FOOTER
+======================================================== */
+footer {
+	padding: $spacing--md 0 $spacing--sm;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $body-font;
+		text-transform: uppercase;
+	}
+
+	.nav-item {
+		font-weight: 400;
+		text-transform: none;
+		color: $text-muted;
+		margin: 0;
+	}
+}
+
+.home {
+	footer {
+		border-top: 0.0625rem solid transparentize($color: white, $amount: 0.9);
+	}
+}
+
+.footer-wrapper {
+	@extend .grid;
+	gap: $spacing--sm;
+
+	@include large {
+		grid-template-columns: 0.5fr 1fr;
+	}
+}
+/* =======================================================
+    2. LOGO
+======================================================== */
+.logo-container {
+	display: flex;
+	flex-direction: column;
+
+	.logo {
+		margin-bottom: 0.625rem;
+	}
+}
+
+/* =======================================================
+    3. FOOTER LINKS
+======================================================== */
+.footer-links {
+	@extend .grid;
+	gap: $spacing--sm;
+	grid-row: 1;
+
+	@include medium {
+		grid-template-columns: repeat(3, 1fr);
+		grid-column: 2;
+		gap: $spacing--md;
+	}
+
+	@include large {
+		gap: $spacing--lg;
+	}
+}
+
+.footer-navmenu {
+	@extend .grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+
+	@include medium {
+		grid-template-columns: 1fr;
+	}
+
+	&.categories {
+		@include medium {
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: $spacing--md;
+		}
+
+		@include large {
+			column-gap: $spacing--lg;
+		}
+	}
+}
+
+.footer-bottom {
+	padding-top: $spacing--sm;
+	margin-top: $spacing--sm;
+	border-top: 1px solid transparentize($color: white, $amount: 0.85);
+	color: $text-muted;
+
+	a {
+		color: inherit;
+	}
+}

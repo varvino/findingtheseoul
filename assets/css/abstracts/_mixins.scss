@@ -7,31 +7,31 @@
     1. MEDIA QUERIES
 ======================================================== */
 @mixin small {
-    @media (max-width: 699px) {
-        @content;
-    }
+	@media (max-width: 699px) {
+		@content;
+	}
 }
 
 @mixin medium {
-    @media (min-width: 700px) {
-        @content;
-    }
+	@media (min-width: 700px) {
+		@content;
+	}
 }
 
 @mixin medium-large {
-    @media (min-width: 900px) {
-        @content;
-    }
+	@media (min-width: 900px) {
+		@content;
+	}
 }
 
 @mixin large {
-    @media (min-width: 1200px) {
-        @content;
-    }
+	@media (min-width: 1200px) {
+		@content;
+	}
 }
 
 @mixin extra-large {
-    @media (min-width: 1600px) {
-        @content;
-    }
+	@media (min-width: 1600px) {
+		@content;
+	}
 }

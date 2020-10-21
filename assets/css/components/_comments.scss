@@ -1,0 +1,66 @@
+/* ========================================================
+    TABLE OF CONTENT
+==========================================================
+    1. COMMENT AUTHOR
+    2. COMMENT FORM
+    3. CHILD COMMENTS
+======================================================== */
+.comment {
+	margin-bottom: $spacing--md;
+}
+
+/* ========================================================
+    1. COMMENT AUTHOR
+======================================================== */
+.comment-author__meta {
+	@extend .flex;
+	align-items: center;
+	margin-bottom: 1.25rem;
+}
+
+.comment-author__name {
+	font-family: $body-font;
+	margin-bottom: 0;
+}
+
+.comment-author__image {
+	width: 3.125rem;
+	border-radius: 50%;
+	margin-right: 0.625rem;
+}
+
+.comment__content {
+	margin-bottom: 1.25rem;
+}
+
+/* ========================================================
+    2. COMMENT FORM
+======================================================== */
+.comment-form {
+	display: none;
+}
+
+.comment-form--toggled {
+	@extend .grid;
+	gap: 1.25rem;
+}
+
+.send-button {
+	justify-self: flex-end;
+	background-color: $primary-color;
+	color: $background-color-light;
+	border: 0;
+}
+
+/* ========================================================
+    3. CHILD COMMENTS
+======================================================== */
+.child-comments {
+	display: flex;
+	align-items: center;
+}
+
+.child-comments__reply-arrow {
+	width: 1.5rem;
+	margin-right: 1.25rem;
+}

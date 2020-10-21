@@ -13,162 +13,162 @@
     1. CONTAINER
 ======================================================== */
 .container {
-    width   : 90%;
-    margin  : 0 auto;
-    position: relative;
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
 
-    @include medium {
-        width: 80%;
-    }
+	@include medium {
+		width: 80%;
+	}
 
-    @include large {
-        width    : 60%;
-        max-width: 1300px;
-    }
+	@include large {
+		width: 70%;
+		max-width: 1300px;
+	}
 }
 
 /* ========================================================
     2. SECTION
 ======================================================== */
 section {
-    margin-bottom: $spacing--md;
+	margin-bottom: $spacing--md;
 
-    @include medium {
-        margin-bottom: $spacing--lg;
-    }
+	@include medium {
+		margin-bottom: $spacing--lg;
+	}
 
-    @include large {
-        margin-bottom: $spacing--xl;
-    }
+	@include large {
+		margin-bottom: $spacing--xl;
+	}
 }
 
 .section__header {
-    margin-bottom: $spacing--sm;
+	margin-bottom: $spacing--sm;
 
-    @include medium {
-        margin-bottom: $spacing--md;
-    }
+	@include medium {
+		margin-bottom: $spacing--md;
+	}
 }
 
 .section__title {
-    margin-bottom: 0.625rem;
+	margin-bottom: 0.625rem;
 }
 
 .section__text {
-    @extend .text--muted;
-    @extend .text;
-    margin-bottom: 0;
+	@extend .text--muted;
+	@extend .text;
+	margin-bottom: 0;
 }
 
 /* ========================================================
     3. GRID
 ======================================================== */
 .grid {
-    display: grid;
+	display: grid;
 }
 
 .grid-column--two {
-    grid-template-columns: 1fr;
+	grid-template-columns: 1fr;
 
-    @include medium {
-        grid-template-columns: repeat(2, 1fr);
-    }
+	@include medium {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 .grid-column--three {
-    grid-template-columns: 1fr;
+	grid-template-columns: 1fr;
 
-    @include medium {
-        grid-template-columns: repeat(3, 1fr);
-    }
+	@include medium {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
 
 .grid-column--four {
-    grid-template-columns: 1fr;
+	grid-template-columns: 1fr;
 
-    @include medium {
-        grid-template-columns: repeat(2, 1fr);
-    }
+	@include medium {
+		grid-template-columns: repeat(2, 1fr);
+	}
 
-    @include large {
-        grid-template-columns: repeat(3, 1fr);
-    }
+	@include large {
+		grid-template-columns: repeat(3, 1fr);
+	}
 
-    @include extra-large {
-        grid-template-columns: repeat(4, 1fr);
-    }
+	@include extra-large {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
 
 /* ========================================================
     3a. GRID GAPS
 ======================================================== */
 .gap--sm {
-    gap: $spacing--sm;
+	gap: $spacing--sm;
 }
 
 .gap--md {
-    gap: $spacing--md;
+	gap: $spacing--md;
 }
 
 .gap--lg {
-    gap: $spacing--lg;
+	gap: $spacing--lg;
 }
 
 .gap--xl {
-    gap: $spacing--xl;
+	gap: $spacing--xl;
 }
 
 /* ========================================================
     3b. GRID ORDER
 ======================================================== */
 .grid-row-first {
-    grid-row: 1;
+	grid-row: 1;
 }
 
 .grid-col-first {
-    grid-column: 1;
+	grid-column: 1;
 }
 
 /* ========================================================
     4. FLEX
 ======================================================== */
 .flex {
-    display: flex;
+	display: flex;
 }
 
 .flex-column {
-    flex-direction: column;
+	flex-direction: column;
 }
 
 .flex-row {
-    flex-direction: row;
+	flex-direction: row;
 }
 
 /* ========================================================
     5. JUSTIFY
 ======================================================== */
 .justify-content-center {
-    justify-content: center;
+	justify-content: center;
 }
 
 .justify-content-between {
-    justify-content: space-between;
+	justify-content: space-between;
 }
 
 .justify-content-around {
-    justify-content: space-around;
+	justify-content: space-around;
 }
 
 .justify-content-evenly {
-    justify-content: space-evenly;
+	justify-content: space-evenly;
 }
 
 .justify-content-end {
-    justify-content: flex-end;
+	justify-content: flex-end;
 }
 
 .justify-content-start {
-    justify-content: flex-start;
+	justify-content: flex-start;
 }
 
 /* ========================================================
@@ -176,64 +176,64 @@ section {
 ======================================================== */
 
 .align-items-center {
-    align-items: center;
+	align-items: center;
 }
 
 .align-items-start {
-    align-items: flex-start;
+	align-items: flex-start;
 }
 
 .align-items-end {
-    align-items: flex-end;
+	align-items: flex-end;
 }
 
 /* ========================================================
     5. MISC
 ======================================================== */
 .no-margin {
-    margin: 0;
+	margin: 0;
 }
 
 .hidden-sm {
-    @include small {
-        display: none;
-    }
+	@include small {
+		display: none;
+	}
 }
 
 .hidden-md {
-    @include medium {
-        display: none;
-    }
+	@include medium {
+		display: none;
+	}
 }
 
 .hidden-lg {
-    @include large {
-        display: none;
-    }
+	@include large {
+		display: none;
+	}
 }
 
 .hidden-xl {
-    @include extra-large {
-        display: none;
-    }
+	@include extra-large {
+		display: none;
+	}
 }
 
 .divider {
-    margin-top   : $spacing--md;
-    margin-bottom: $spacing--md;
+	margin-top: $spacing--md;
+	margin-bottom: $spacing--md;
 
-    @include medium {
-        margin-top   : $spacing--lg;
-        margin-bottom: $spacing--lg;
-    }
+	@include medium {
+		margin-top: $spacing--lg;
+		margin-bottom: $spacing--lg;
+	}
 
-    @include large {
-        margin-top   : $spacing--xl;
-        margin-bottom: $spacing--xl;
-    }
+	@include large {
+		margin-top: $spacing--xl;
+		margin-bottom: $spacing--xl;
+	}
 }
 
 .full-width {
-    width      : 100vw;
-    margin-left: calc((100% - 100vw) / 2);
+	width: 100vw;
+	margin-left: calc((100% - 100vw) / 2);
 }

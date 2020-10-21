@@ -1,0 +1,26 @@
+/* ========================================================
+    TABLE OF CONTENT
+==========================================================
+    1. BUTTON
+======================================================== */
+/* =======================================================
+    1. BUTTON
+======================================================== */
+button,
+.button {
+	@extend .flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	border: 0.0625rem solid white;
+	border-radius: 0.3125rem;
+	outline: 0;
+	color: $primary-color;
+	font-weight: 700;
+	padding: 0.5rem 1.875rem;
+	cursor: pointer;
+
+	.dashicons {
+		margin: 0 0 0 0.3125rem;
+	}
+}

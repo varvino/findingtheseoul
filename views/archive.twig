@@ -1,9 +1,33 @@
-{# This file demonstrates using most of the index.twig template and modifying 
-   just a small part. See `search.twig` for an example of another approach #}
-
-{% extends "index.twig" %}
+{% extends "base.twig" %}
 
 {% block content %}
+	<section class="archive">
+		<div class="container">
+			<h1 class="archive__title">{{title}}</h1>
+			<div class="blog-post-previews">
+				{% for post in posts %}
+					{% include "partials/blog-post-preview.twig" %}
+				{% endfor %}
+			</div>
 			{{ function('the_posts_pagination', {prev_text: 'Prev.'}) }}</div>
+	</section>
+	<section class="explore" id="explore">
+		<div class="container">
+			<div class="section__header">
+				<h2 class="section__title">Explore</h2>
+				<div class="section__text">Read through a variety of my stories, try one of these categories.</div>
+			</div>
+			<div class="category-previews items">
+				{% for category in categories %}
+					<a href="{{category.link}}" class="category-preview-container">
+						<div class="category-preview">
+							<h4 class="category-preview__title">{{category}}</h4>
+							<img src="{{category.thumbnail.guid|resize(600)}}" alt="" class="category-preview__image">
+						</div>
+						<div class="category-preview__overlay"></div>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
 	</section>
 {% endblock %}

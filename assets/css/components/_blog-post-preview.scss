@@ -11,94 +11,94 @@
     1. BLOG POST PREVIEW
 ======================================================== */
 .blog-post-previews {
-    @extend .grid;
-    @extend .grid-column--four;
-    gap: $spacing--md;
+	@extend .grid;
+	@extend .grid-column--four;
+	gap: $spacing--md;
 
-    @include large {
-        gap: $spacing--sm;
-    }
+	@include large {
+		gap: $spacing--sm;
+	}
 }
 
 .blog-post-preview {
-    @extend .flex;
-    @extend .flex-column;
-    justify-content    : flex-end;
-    padding            : 1.25rem;
-    padding-bottom     : $spacing--sm;
-    background-size    : cover;
-    background-position: center;
-    background-repeat  : no-repeat;
-    height             : 400px !important;
+	@extend .flex;
+	@extend .flex-column;
+	justify-content: flex-end;
+	padding: 1.25rem;
+	padding-bottom: $spacing--md;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 400px !important;
+	transition: 0.25s all ease;
 
-    a {
-        color: white;
-    }
+	a {
+		color: white;
+	}
 }
-
 
 /* ========================================================
     a. BLOG POST PREVIEW - HEADER
 ======================================================== */
 .blog-post-preview__title {
-    margin-bottom: 0.625rem;
+	margin-bottom: 0.625rem;
 }
 
 .blog-post-preview__subtitle {
-    font-family   : $body-font;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    margin-bottom : 0.625rem;
+	font-family: $body-font;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-bottom: 0.625rem;
 
-    a {
-        color: $primary-color !important;
-    }
+	a {
+		color: $primary-color !important;
+	}
 }
 
 /* ========================================================
     b. BLOG POST PREVIEW - BODY
 ======================================================== */
 .blog-post-preview__body {
-    @extend .grid;
-    gap: $spacing--sm;
+	@extend .grid;
+	gap: $spacing--sm;
 }
 
 /* ========================================================
     c. BLOG POST PREVIEW - READ MORE
 ======================================================== */
 .blog-post-preview__read-more-container {
-    @extend .flex;
-    align-items: center;
+	@extend .flex;
+	align-items: center;
 }
 
 .blog-post-preview__read-more {
-    @extend .flex;
-    align-items   : center;
-    margin-right  : 1.25rem;
-    font-weight   : 700;
-    text-transform: uppercase;
+	@extend .flex;
+	align-items: center;
+	margin-right: 1.25rem;
+	font-weight: 700;
+	text-transform: uppercase;
 
-    &:before {
-        content     : "\f345";
-        font-family : "Dashicons";
-        margin-right: 0.3125rem;
-    }
-
-    &:after {
-        content    : "|";
-        margin-left: 1.25rem;
-    }
+	&:before {
+		content: "\f345";
+		font-family: "Dashicons";
+		margin-right: 0.3125rem;
+	}
 }
 
 /* ========================================================
     d. BLOG POST PREVIEW - COMMENTS
 ======================================================== */
 .blog-post-preview__comment-icon {
-    margin-right: 0.3125rem;
-    color       : $primary-color;
+	margin-right: 0.3125rem;
+	color: $primary-color;
 }
 
 .blog-post-preview__comments {
-    @extend .flex;
-    align-items: center;
+	@extend .flex;
+	align-items: center;
+
+	&:before {
+		content: "|";
+		margin-right: 1.25rem;
+	}
 }

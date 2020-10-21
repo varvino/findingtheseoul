@@ -16,7 +16,6 @@
 	{% if post.comments %}
 		<div class="child-comments">
 			{% for comment in comment.children %}
-				<img class="child-comments__reply-arrow" src="{{theme.link}}/assets/img/arrow-right.svg">
 				{% include "partials/comment.twig" with {comment:comment} %}
 			{% endfor %}
 		</div>

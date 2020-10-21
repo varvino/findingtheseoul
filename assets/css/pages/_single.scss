@@ -1,0 +1,85 @@
+/* ========================================================
+    TABLE OF CONTENT
+==========================================================
+    1. GENERAL
+    2. COMMENTS
+    3. AUTHOR
+======================================================== */
+/* ========================================================
+    1. GENERAL
+======================================================== */
+.single {
+	.hero-container {
+		padding-bottom: 3.125rem;
+	}
+}
+
+figure {
+	// Figure has set width
+	width: 100% !important;
+	margin: 0 0 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+figcaption {
+	color: darken($color: $font-color, $amount: 50%);
+	font-style: italic;
+	margin-top: 10px;
+}
+
+.read-more-below__icon {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid white;
+	padding: 1rem;
+	border-radius: 50%;
+	margin: 0 0 0 1rem;
+}
+/* ========================================================
+    2. GALLERY
+======================================================== */
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 5vw;
+
+	@include medium {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 3vw;
+	}
+
+	@media (min-width: 1024px) {
+		gap: 2vw;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@include large {
+		gap: 1vw;
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
+
+time {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: darken($color: $font-color, $amount: 50%);
+}
+
+.blog-post {
+	margin-bottom: 0;
+}
+/* ========================================================
+    3. COMMENTS
+======================================================== */
+.comments-container {
+	position: relative;
+	background-color: $background-color-light;
+	padding: $spacing--lg 0;
+}
+
+.author-container {
+	background-color: $background-color-light;
+	padding: $spacing--lg 0;
+}

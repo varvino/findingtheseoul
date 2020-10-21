@@ -11,79 +11,89 @@
     1. FEATURED POST PREVIEW
 ======================================================== */
 .featured-post-preview {
-    @extend .grid;
-    @extend .grid-column--two;
-    gap: $spacing--sm;
+	@extend .grid;
+	@extend .grid-column--two;
+	gap: $spacing--sm;
 }
-
 
 /* ========================================================
     a. FEATURED POST PREVIEW - HEADER
 ======================================================== */
 .featured-post-preview__title {
-    margin-bottom: 0.625rem;
+	margin-bottom: 0.625rem;
+
+	a {
+		color: $font-color;
+	}
 }
 
 .featured-post-preview__subtitle {
-    font-family   : $body-font;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    margin-bottom : 0;
+	font-family: $body-font;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-bottom: 0;
 
-    a {
-        color: $primary-color !important;
-    }
+	a {
+		color: $primary-color !important;
+	}
 }
 
 /* ========================================================
     b. FEATURED POST PREVIEW - BODY
 ======================================================== */
 .featured-post-preview__body {
-    @extend .grid;
-    gap: $spacing--sm;
+	@extend .grid;
+	gap: $spacing--sm;
 }
 
 .featured-post-preview__content {
-    @extend .text;
-    margin-bottom: 0;
+	@extend .text;
+	margin-bottom: 0;
 }
 
 /* ========================================================
     c. FEATURED POST PREVIEW - READ MORE
 ======================================================== */
 .featured-post-preview__read-more-container {
-    @extend .flex;
-    align-items: center;
+	@extend .flex;
+	align-items: center;
 }
 
 .featured-post-preview__read-more {
-    @extend .flex;
-    align-items   : center;
-    margin-right  : 1.25rem;
-    font-weight   : 700;
-    text-transform: uppercase;
+	@extend .flex;
 
-    &:before {
-        content     : "\f345";
-        font-family : "Dashicons";
-        margin-right: 0.3125rem;
-    }
+	align-items: center;
+	margin-right: 1.25rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: inherit;
 
-    &:after {
-        content    : "|";
-        margin-left: 1.25rem;
-    }
+	&:before {
+		content: "\f345";
+		font-family: "Dashicons";
+		margin-right: 0.3125rem;
+	}
 }
 
 /* ========================================================
     d. FEATURED POST PREVIEW - COMMENTS
 ======================================================== */
 .featured-post-preview__comment-icon {
-    margin-right: 0.3125rem;
-    color       : $primary-color;
+	margin-right: 0.3125rem;
+	color: $primary-color;
 }
 
 .featured-post-preview__comments {
-    @extend .flex;
-    align-items: center;
+	@extend .flex;
+	align-items: center;
+	color: inherit;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:before {
+		content: "|";
+		margin-right: 1.25rem;
+	}
 }

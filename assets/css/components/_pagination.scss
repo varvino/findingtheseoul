@@ -1,0 +1,74 @@
+/* ========================================================
+    TABLE OF CONTENT
+==========================================================
+    1. PAGINATION
+======================================================== */
+/* =======================================================
+    1. PAGINATION
+======================================================== */
+.pagination {
+	margin-top: $spacing--sm;
+
+	@include medium {
+		margin-top: $spacing--md;
+	}
+
+	.screen-reader-text {
+		display: none;
+	}
+
+	.nav-links {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.page-numbers {
+	$pagination_size: $spacing--md;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	border: 1px solid $text-muted;
+	border-radius: 50%;
+	margin: 0 0.625rem 0.625rem 0;
+	min-width: $pagination_size;
+	min-height: $pagination_size;
+	color: $text-muted;
+	transition: 0.25s all ease;
+
+	@include medium {
+		margin-bottom: 0;
+	}
+
+	&:hover {
+		text-decoration: none;
+		border-color: $font-color;
+		color: $font-color;
+	}
+
+	&.dots {
+		user-select: none;
+
+		&:hover {
+			border-color: $text-muted;
+			color: $text-muted;
+		}
+	}
+}
+
+.page-numbers.current {
+	border-color: $primary-color;
+	color: $primary-color;
+	user-select: none;
+
+	&:hover {
+		border-color: $primary-color;
+		color: $primary-color;
+	}
+}

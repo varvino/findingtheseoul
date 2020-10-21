@@ -6,17 +6,17 @@
 		{% endblock %}
 	</head>
 	<body class="{{body_class}}" data-template="base.twig">
-		<header {% if not fn('is_front_page') %} class="container" {% endif %}>
+		<header>
 			{% block header %}
 				{% include 'layout/header.twig' %}
 			{% endblock %}
 		</header>
-		<main {% if not fn('is_front_page') %} class="container" {% endif %}>
+		<main>
 			{% block content %}
 				Content
 			{% endblock %}
 		</main>
-		<footer {% if not fn('is_front_page') %} class="container" {% endif %}>
+		<footer>
 			{% block footer %}
 				{% include 'layout/footer.twig' %}
 			{% endblock %}

@@ -7,14 +7,23 @@
 			<a href="{{post.category.link}}">{{post.category}}</a>
 		</h3>
 	</div>
-	<div class="featured-post-preview__body">
-		<p class="featured-post-preview__content">{{post.preview.length(30).force.read_more('')}}</p>
-		<div class="featured-post-preview__read-more-container">
-			<a href="{{post.link}}" class="featured-post-preview__read-more">Read article</a>
-			<a href="{{post.link}}" class="featured-post-preview__comments">
-				<span class="dashicons dashicons-admin-comments featured-post-preview__comment-icon"></span>
-				<div class="featured-post-preview__comment-count">{{post.comment_count}}</div>
-			</a>
+	{% if fn('is_front_page') %}
+		<div class="featured-post-preview__body">
+			<p class="featured-post-preview__content">{{post.preview.length(30).force.read_more('')}}</p>
+			<div class="featured-post-preview__read-more-container">
+				<a href="{{post.link}}" class="featured-post-preview__read-more">Read article</a>
+				<a href="{{post.link}}" class="featured-post-preview__comments">
+					<span class="dashicons dashicons-admin-comments featured-post-preview__comment-icon"></span>
+					<div class="featured-post-preview__comment-count">{{post.comment_count}}</div>
+				</a>
+			</div>
 		</div>
-	</div>
+	{% else %}
+		<div class="flex flex-row justify-content-end align-items-end text--muted">
+			<div class="flex align-items-center">
+				<div>Read article below</div>
+				<span class="dashicons dashicons-arrow-down-alt read-more-below__icon"></span>
+			</div>
+		</div>
+	{% endif %}
 </div>

@@ -8,24 +8,25 @@
 /* ========================================================
     1. FONTS
 ======================================================== */
-$body-font: 'Assistant',
-sans-serif;
-$headings-font: 'Merriweather',
-serif;
+$body-font: "Assistant", sans-serif;
+$headings-font: "Merriweather", serif;
 
 /* ========================================================
     2. THEME COLORS
 ======================================================== */
-$primary-color         : #FF9A3D;
-$font-color            : white;
-$background-color      : #1E2225;
+$primary-color: #ff9a3d;
+$font-color: white;
+$background-color: #1e2225;
 $background-color-light: #292d30;
 
-$text-muted  : transparentize($color: white, $amount: 0.5);
+$text-muted: transparentize(
+	$color: white,
+	$amount: 0.5,
+);
 /* ========================================================
     3. SPACERS
 ======================================================== */
-$spacing--sm : 1.875rem;
-$spacing--md : 3.125rem;
-$spacing--lg : 6.25rem;
-$spacing--xl : 9.375rem;
+$spacing--sm: 1.875rem;
+$spacing--md: 3.125rem;
+$spacing--lg: 6.25rem;
+$spacing--xl: 9.375rem;

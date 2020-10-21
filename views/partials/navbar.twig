@@ -1,14 +1,19 @@
 <div class="navbar">
-	<a href="{{site.link}}" class="logo">
-		<h3 class="logo__text">Findingtheseoul</h3>
-	</a>
-	<div class="hamburger" onclick="openNav()"></div>
-	<div class="navmenu-overlay">
-		<a href="javascript:void(0)" class="button--close" onclick="closeNav()"></a>
-		<div class="navmenu">
-			{% for item in header_menu.items %}
-				<a class="nav-item{{ item.classes|join(' ') }}" href="{{ item.link }}">{{ item.title }}</a>
-			{% endfor %}
+	<div class="{% if not fn('is_front_page') and not fn('is_single') %}container{% else %}container--full-width{% endif %}">
+		<a href="{{site.link}}" class="logo">
+			<h3 class="logo__text">Findingtheseoul</h3>
+		</a>
+		<button class="hamburger"></button>
+		<div class="navmenu-container">
+			<button class="button--close" onclick="closeNav()"></button>
+			<div class="navmenu">
+				<button class="nav-item dropdown-toggle">Categories</button>
+				<div class="dropdown">
+					{% for category in categories %}
+						<a href="{{category.link}}" class="dropdown__item">{{category.title}}</a>
+					{% endfor %}
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

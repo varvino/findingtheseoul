@@ -24,10 +24,14 @@
 				<h2 class="section__title">Explore</h2>
 				<div class="section__text">Read through a variety of my stories, try one of these categories.</div>
 			</div>
-			<div class="category-previews items">
+			<div class="explore-items">
 				{% for category in categories %}
-					<a href="{{category.link}}" class="category-preview" style="background-image: linear-gradient(180deg, rgba(30, 34, 37, 0) 0%, #1E2225 90%, #1E2225 90%), url({{category.thumbnail.guid|resize(400)}});">
-						<h4 class="category-preview__title">{{category}}</h4>
+					<a href="{{category.link}}" class="explore-item-container">
+						<div class="explore-item">
+							<h4 class="explore-item__title">{{category}}</h4>
+							<img src="{{category.thumbnail.guid|resize(600)}}" alt="" class="explore-item__image">
+						</div>
+						<div class="explore-item__overlay"></div>
 					</a>
 				{% endfor %}
 			</div>
@@ -46,24 +50,19 @@
 		<img class="about__image" src="{% for post in posts %}{{post.thumbnail.src}}{% endfor %}" alt="Placeholder">
 	</section>
 
-	<section class="instagram-feed">
+	<section class="instagram-feed" id="instagram-feed">
 		<div class="container">
 			<div class="section__header">
 				<div class="section__header-content">
 					<h2 class="section__title">Instagram Feed</h2>
-					<div class="section__text">Here's a few of my most recent Instagram posts.</div>
+					<div class="section__text">Here are a few of my most recent Instagram posts.</div>
 				</div>
 				<div class="section__link-container">
-					<a href="https://www.instagram.com/findingtheseoul/" class="section__link">View more on Instagram</a>
+					<a href="https://www.instagram.com/findingtheseoul/" target="_blank" class="section__link">View more on Instagram</a>
 				</div>
 			</div>
 			<div class="section__body">
-				<div class="gallery">
-					<a class="gallery__item" href="#"><img src="https://via.placeholder.com/400" alt="Placeholder" class="gallery__image"></a>
-					<a class="gallery__item" href="#"><img src="https://via.placeholder.com/400" alt="Placeholder" class="gallery__image"></a>
-					<a class="gallery__item" href="#"><img src="https://via.placeholder.com/400" alt="Placeholder" class="gallery__image"></a>
-					<a class="gallery__item" href="#"><img src="https://via.placeholder.com/400" alt="Placeholder" class="gallery__image"></a>
-				</div>
+				<div class="instagram-gallery"></div>
 			</div>
 		</div>
 	</section>
