@@ -19,6 +19,7 @@ $args = array(
     'post_type' => 'post'
 );
 $context['recent_posts'] = new Timber\PostQuery($args);
+$context['posts'] = new Timber\PostQuery();
 
 $templates        = array('front-page.twig', 'home.twig');
 
