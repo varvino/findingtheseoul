@@ -9,6 +9,13 @@
 			{% endfor %}
 		</div>
 	</section>
+{% elseif fn('is_single') %}
+	<section class="hero" style="background-image:  linear-gradient(180deg, rgba(30, 34, 37, 0) 20%, #1E2225 70%), url('{{post.thumbnail}}')">
+		<div class="hero-container container">
+			{% include "partials/navbar.twig" %}
+			{% include "partials/featured-post-preview.twig" %}
+		</div>
+	</section>
 {% else %}
 	{% include "partials/navbar.twig" %}
 	{{custom_breadcrumbs()}}
